@@ -1,4 +1,6 @@
-.jcache-data
+.ycache-data
+
+build/
 
 *.py[cod]
 
