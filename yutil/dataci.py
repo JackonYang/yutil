@@ -2,12 +2,18 @@ import json
 import os
 
 
+exclude_keys = [
+    '#',  # comments
+]
+
+
 def use_data(data):
     def wrapper(f):
         def _func(*args, **kwargs):
             for tc in data:  # tc is short for testcase
                 try:
                     if isinstance(tc, dict):
+                        tc = {k: v for k, v in tc.items() if k not in exclude_keys}
                         f(**tc)
                     else:
                         f(*tc)
@@ -32,6 +38,7 @@ def use_json_data(filename):
             for tc in data:
                 try:
                     if isinstance(tc, dict):
+                        tc = {k: v for k, v in tc.items() if k not in exclude_keys}
                         f(**tc)
                     else:
                         f(*tc)
