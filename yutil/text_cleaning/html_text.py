@@ -18,6 +18,9 @@ tags_cleaner = bleach.Cleaner(
 
 
 def convert_html_to_text(text, merge_continuous_spaces=True):
+    if not text:
+        return text
+
     # clean html entity first
     text = h.unescape(text)
 

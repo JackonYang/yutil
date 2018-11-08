@@ -1,5 +1,19 @@
 [
     {
+        "#": "boundary tests",
+        "input_obj": "",
+        "expect": ""
+    },
+    {
+        "#": "boundary tests",
+        "input_obj": null,
+        "expect": null
+    },
+    {
+        "input_obj": "a",
+        "expect": "a"
+    },
+    {
         "#": "html entity",
         "input_obj": "&lt;h1>hello</h1>",
         "expect": "hello"

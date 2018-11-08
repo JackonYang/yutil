@@ -9,4 +9,4 @@ _CONTINUOUS_SPACE_PTN = re.compile('[%s]+' % _SPACE_CHARACTERS)
 
 
 def remove_continuous_spaces(s):
-    return _CONTINUOUS_SPACE_PTN.sub(' ', s.strip())
+    return s and _CONTINUOUS_SPACE_PTN.sub(' ', s.strip())
