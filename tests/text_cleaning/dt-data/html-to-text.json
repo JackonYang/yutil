@@ -40,5 +40,9 @@
         "#": "spacial case",
         "input_obj": "&lt; h1 &gt;  hello  world   &lt;/ h1  &gt;",
         "expect": "&lt; h1 &gt; hello world"
+    },
+    {
+        "input_obj": "hello\\@world",
+        "expect": "hello@world"
     }
 ]
